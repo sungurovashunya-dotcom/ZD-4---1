@@ -37,7 +37,7 @@
             // richTextBox1
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox1.Location = new System.Drawing.Point(30, 31);
+            this.richTextBox1.Location = new System.Drawing.Point(35, 31);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(187, 64);
             this.richTextBox1.TabIndex = 0;
@@ -49,10 +49,11 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 25;
             this.listBox1.Items.AddRange(new object[] {
-            "+",
-            "-",
-            "/",
-            "*"});
+            "sin",
+            "cos",
+            "tg",
+            "",
+            ""});
             this.listBox1.Location = new System.Drawing.Point(281, 6);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(58, 154);

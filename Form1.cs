@@ -19,29 +19,27 @@ namespace WindowsFormsApp9
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int a = Convert.ToInt32(richTextBox1.Text);
-            int b = Convert.ToInt32(richTextBox2.Text);
+            if (!double.TryParse(richTextBox1.Text, out double degrees))
+            {
+                label1.Text = "Ошибка ввода числа";
+                return;
+            }
+            double radians = degrees * Math.PI / 180.0;
+            double result = 0.0;
             string item = listBox1.SelectedItem.ToString();
-
-
-            if (item == "+")
+            if (item == "sin")
             {
-                label1.Text = (a + b).ToString();
+                result = Math.Sin(radians);
             }
-            if (item == "-")
+            else if (item == "cos")
             {
-                label1.Text = (a - b).ToString();
+                result = Math.Cos(radians);
             }
-            if (item == "/")
+            else if (item == "tg")
             {
-                label1.Text = (a / b).ToString();
+                result = Math.Tan(radians);
             }
-            if (item == "*")
-            {
-                label1.Text = (a * b).ToString();
-                {
-                }
-            }
+            label1.Text = result.ToString();
         }
     }
 }
